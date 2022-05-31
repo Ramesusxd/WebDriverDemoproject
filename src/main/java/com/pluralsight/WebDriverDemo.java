@@ -8,8 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WebDriverDemo {
-// to use specific WebDriver remove the comment marks from the one you wish to use and
-// replace them on the ones you dont want to use
+// to use specific WebDrive, remove the comment marks from the one you wish to use and
+// replace them on the ones you don't want to use
     public static void main (String[] args) throws InterruptedException {
         WebDriver driver = new FirefoxDriver();
         driver.get("http://www.google.com");
