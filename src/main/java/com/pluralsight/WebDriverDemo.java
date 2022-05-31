@@ -5,13 +5,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.opera.OperaDriver;
 
 public class WebDriverDemo {
 // to use specific WebDrive, remove the comment marks from the one you wish to use and
 // replace them on the ones you don't want to use
     public static void main (String[] args) throws InterruptedException {
         WebDriver driver = new FirefoxDriver();
+        //WebDriver driver = new ChromeDriver();
+        //WebDriver driver = new OperaDriver();
         driver.get("http://www.google.com");
 
         WebElement searchField = driver.findElement(By.name("q"));
