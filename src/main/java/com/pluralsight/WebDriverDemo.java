@@ -10,22 +10,28 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
 public class WebDriverDemo {
-// to use specific WebDrive, remove the comment marks from the one you wish to use and
+// to use specific WebDriver, remove the comment marks from the one you wish to use and
 // replace them on the ones you don't want to use
     public static void main (String[] args) throws InterruptedException {
         WebDriver driver = new FirefoxDriver();
         //WebDriver driver = new ChromeDriver();
         //WebDriver driver = new OperaDriver();
         driver.get("http://www.google.com");
-
+// WebElement commands below
         WebElement searchField = driver.findElement(By.name("q"));
         searchField.click();
         searchField.sendKeys("Pokemon.com");
         searchField.sendKeys(Keys.ENTER);
+        // added "Thread.sleep(2000);" because test was going to fast not testing all that's coded
         Thread.sleep(2000);
 
         WebElement imagesLink = driver.findElements(By.linkText("Images")).get(0);
         imagesLink.click();
+
+        WebElement imageElement= driver.findElements(By.cssSelector("img[class = 'rg_i Q4LuWd']")).get(0);
+        imageElement.click();
+
+        //driver.getPageSource().contains("The Official pokémon Website");
 
     }
 
