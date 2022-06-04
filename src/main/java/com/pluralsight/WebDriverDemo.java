@@ -13,9 +13,9 @@ public class WebDriverDemo {
 // to use specific WebDriver, remove the comment marks from the one you wish to use and
 // replace them on the ones you don't want to use
     public static void main (String[] args) throws InterruptedException {
-        WebDriver driver = new FirefoxDriver();
+        //WebDriver driver = new FirefoxDriver();
         //WebDriver driver = new ChromeDriver();
-        //WebDriver driver = new OperaDriver();
+        WebDriver driver = new OperaDriver();
         driver.get("http://www.google.com");
 // WebElement commands below
         WebElement searchField = driver.findElement(By.name("q"));
@@ -31,7 +31,7 @@ public class WebDriverDemo {
         WebElement imageElement= driver.findElements(By.cssSelector("img[class = 'rg_i Q4LuWd']")).get(0);
         imageElement.click();
 
-        //driver.getPageSource().contains("The Official pokémon Website");
+        driver.getPageSource().contains("The Official pokémon Website");
 
     }
 
