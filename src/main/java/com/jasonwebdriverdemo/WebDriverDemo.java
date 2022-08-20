@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WebDriverDemo {
@@ -21,8 +20,8 @@ public class WebDriverDemo {
         searchField.click();
         searchField.sendKeys("Pokemon.com");
         searchField.sendKeys(Keys.ENTER);
-        // added "Thread.sleep(2000);" because test was going to fast not testing all that's coded
         Thread.sleep(2000);
+        /* added "Thread.sleep(2000);" because test was going to fast not testing all that's coded */
 
         WebElement imagesLink = driver.findElements(By.linkText("Images")).get(0);
         imagesLink.click();
