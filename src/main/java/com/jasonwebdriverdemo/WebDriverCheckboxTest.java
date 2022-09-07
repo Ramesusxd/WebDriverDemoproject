@@ -15,6 +15,7 @@ public class WebDriverCheckboxTest {
 
         WebElement checkBox = driver.findElement(By.id("snickersCheckbox"));
         checkBox.click();
+        checkBox.click();
 
     }
 }

@@ -6,6 +6,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class WebDriverDemo {
 // to use specific WebDriver, remove the comment marks from the one you wish to use and
@@ -22,6 +26,9 @@ public class WebDriverDemo {
         searchField.sendKeys(Keys.ENTER);
         Thread.sleep(2000);
         /* added "Thread.sleep(2000);" because test was going to fast not testing all that's coded */
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Images")));
 
         WebElement imagesLink = driver.findElements(By.linkText("Images")).get(0);
         imagesLink.click();
